@@ -58,7 +58,6 @@
 - 팀원들 코드 취합
 - 마이 페이지 보관함
 
----
 
  ------------------------------------------------------------------------------------
  - ## 목차
@@ -85,7 +84,6 @@
 ---
 
 ## ERD
-![Image](https://github.com/user-attachments/assets/10b9af21-323f-4d2c-88c4-d9a1ed1be82f)
 <img width="1024" height="787" alt="image" src="https://github.com/user-attachments/assets/1a602e1c-8ea7-47ae-8a1a-c356ed041723" />
 
 ---
