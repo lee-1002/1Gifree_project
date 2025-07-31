@@ -94,3 +94,11 @@
 <img width="1024" height="787" alt="image" src="https://github.com/user-attachments/assets/1a602e1c-8ea7-47ae-8a1a-c356ed041723" />
 
 ---
+
+## 유스케이스다이어그램
+- 전체
+<img width="1679" height="592" alt="image" src="https://github.com/user-attachments/assets/4d8b6a7c-693e-4790-8f5b-45ab85f70ff7" />
+
+
+---
+
