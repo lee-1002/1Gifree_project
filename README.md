@@ -112,10 +112,12 @@
 ### 그래프
 - 메인 화면에서 DB에 저장된 회원별 기부 내역을 금액과 횟수 중 궁금한 내용을 검색해서 그래프로 확인할 수 있다.
 ![gifree 시연영상(그래프)](https://github.com/user-attachments/assets/b115efc9-edf5-429a-8636-93d1758262cd)
+<img width="1684" height="1039" alt="image" src="https://github.com/user-attachments/assets/9f2b1a02-c621-455a-9c25-ed23fe588ac2" />
 
 ### 지도
 - 카카오 지도API를 가져와서 내 위치 확인과 주변 가게 상호명, 나와의 직선 거리(가까운 거리 순으로 정렬), 검색창에 브랜드 또는 가게명 입력 시 판매 중인 기프티콘 중 검색한 이름과 같으면 상품도 리스트에 나와서 장바구니에 넣기 가능
 ![1-ezgif com-speed](https://github.com/user-attachments/assets/75f95081-72c0-460f-97ce-8752f2b9a286)
+<img width="1328" height="1017" alt="image" src="https://github.com/user-attachments/assets/53326b22-329e-495b-afd0-572d82cc9991" />
 
 ### 챗봇
 - 챗봇에 상품 목록, 구매 내역 등을 입력하면 실시간으로 사용자의 상태를 텍스트로 보여주고 음성 MCP 방식으로 사고 싶은 브랜드의 상품명과 개수를 말하고 사고 싶다고 말하면 결제 API가 나오고 결제까지 완료되도록 구현
