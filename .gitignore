@@ -1,0 +1,30 @@
+# Secret Key 파일
+vision_key.json
+
+# 환경 변수 및 민감 정보
+.env
+
+# Python 가상환경 및 캐시
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Node.js 의존성
+node_modules/
+
+# macOS 시스템 파일
+.DS_Store
+
+# IDE 설정 폴더
+.vscode/
+.idea/
+
+# Gradle 빌드 결과물
+/build/
+/build/libs/
+/*.jar
+*.jar
+
+
+# 여기에 파일 명을 적으면 해당 파일은 Git에 추적되지 않아 commit, push 시 올라가지 않습니다.
