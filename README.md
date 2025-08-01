@@ -13,20 +13,13 @@
 
 - 25.6.30(월) ~ 25.07.30(수)
 
-### 멤버
+## 멤버 
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/autumn-trip"><img src="https://avatars.githubusercontent.com/lee-1002" width="100px;" alt=""/><br /><sub><b>lee-1002</b></sub></a></td>
-    <td align="center"><a href="https://github.com/rlawltn3551"><img src="https://avatars.githubusercontent.com/LeeYongseok-0000" width="100px;" alt=""/><br /><sub><b>LeeYongseok-0000</b></sub></a></td>
-    <td align="center"><a href="https://github.com/kyungmin115"><img src="https://avatars.githubusercontent.com/jh-8249" width="100px;" alt=""/><br /><sub><b>jh-8249</b></sub></a></td>
-     <td align="center"><a href="https://github.com/Yeop9999"><img src="https://avatars.githubusercontent.com/jihyuk123979" width="100px;" alt=""/><br /><sub><b>jihyuk123979</b></sub></a></td>
-  </tr>
-</table>
 
-- 팀장 : 이상원
-  
-- 팀원 : 이용석, 장준혁, 박지혁
+|                    (팀장) [이상원](https://github.com/lee-1002)                    |                     [이용석](https://github.com/LeeYongseok-0000)                     |                      [장준혁](https://github.com/jjh-8249)                     |                      [박지혁](https://github.com/weare2415)                     |
+|:-------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|
+| [<img src="https://avatars.githubusercontent.com/u/183713556?v=4" width="200" />](https://github.com/lee-1002) | [<img src="https://avatars.githubusercontent.com/u/184890981?v=4" width="200" />](https://github.com/LeeYongseok-0000) | [<img src="https://avatars.githubusercontent.com/u/183588723?v=4" width="200" />](https://github.com/jjh-8249) | [<img src="https://avatars.githubusercontent.com/u/177728506?v=4" width="200" />](https://github.com/jihyuk123979) |
+
 
 ----
 
