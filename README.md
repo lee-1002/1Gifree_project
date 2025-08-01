@@ -90,6 +90,7 @@
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white">
 <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=OpenAI&logoColor=white">
+<img src="https://img.shields.io/badge/Google%20Cloud%20API-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white">
 </div>
 - IDE
   
