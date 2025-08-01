@@ -1,0 +1,465 @@
+/* 컨테이너 스타일 */
+.random-box-container {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* 제목 스타일 */
+.title {
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 0 40px 0;
+}
+
+/* 확률 표시 스타일 */
+.probability-container {
+  margin: 20px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.probability-item {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  color: white;
+  font-weight: bold;
+}
+
+.probability-item.common {
+  background-color: #95a5a6;
+}
+
+.probability-item.rare {
+  background-color: #3498db;
+}
+
+.probability-item.epic {
+  background-color: #9b59b6;
+}
+
+.probability-item.legendary {
+  background-color: #f1c40f;
+}
+
+/* 랜덤박스 버튼 스타일 */
+.gacha-box {
+  background: linear-gradient(45deg, #ffd700, #ffa500, #ff6b35);
+  border: none;
+  border-radius: 20px;
+  padding: 25px 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin: 30px 0;
+  box-shadow: 0 10px 20px rgba(255, 165, 0, 0.4);
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.gacha-box:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.gacha-box:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 165, 0, 0.6);
+}
+
+.gacha-box:hover:before {
+  animation: shine 0.7s ease-in-out;
+}
+
+.gacha-box:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.gacha-box.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.gacha-box.opening {
+  animation: shake 0.8s ease-in-out;
+}
+
+/* 카드 결과 영역 */
+.card-result {
+  margin: 40px 0;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 카드 스타일 */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  border: 4px solid;
+  animation: cardReveal 1s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.7s;
+}
+
+.card:hover:before {
+  left: 100%;
+}
+
+.card.common {
+  border-color: #95a5a6;
+  box-shadow: 0 15px 30px rgba(149, 165, 166, 0.3);
+}
+
+.card.rare {
+  border-color: #3498db;
+  box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+}
+
+.card.epic {
+  border-color: #9b59b6;
+  box-shadow: 0 15px 30px rgba(155, 89, 182, 0.4);
+}
+
+.card.legendary {
+  border-color: #f1c40f;
+  box-shadow: 0 15px 30px rgba(241, 196, 15, 0.5);
+  animation: cardReveal 1s ease-out forwards,
+    glow 2s ease-in-out infinite alternate;
+}
+
+/* 카드 내용 스타일 */
+.card-name {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-rarity {
+  font-size: 1em;
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: white;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-rarity.common {
+  background-color: #95a5a6;
+}
+
+.card-rarity.rare {
+  background-color: #3498db;
+}
+
+.card-rarity.epic {
+  background-color: #9b59b6;
+}
+
+.card-rarity.legendary {
+  background-color: #f1c40f;
+}
+
+.card-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+/* 구매 처리 중 메시지 스타일 */
+.purchase-status {
+  margin-top: 20px;
+  padding: 15px;
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  border-radius: 15px;
+  color: white;
+  animation: purchasePulse 2s ease-in-out infinite;
+}
+
+.purchase-loading {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.purchase-message {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* 구매목록 보기 버튼 스타일 */
+.view-purchase-button {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 15px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.view-purchase-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+  background: linear-gradient(45deg, #2980b9, #3498db);
+}
+
+.view-purchase-button:active {
+  transform: translateY(0);
+}
+
+@keyframes purchasePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.5);
+  }
+}
+
+/* 대기 메시지 스타일 */
+.waiting-message {
+  color: #666;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* 애니메이션 */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+  15% {
+    transform: translateX(-8px) scale(1.02);
+  }
+  30% {
+    transform: translateX(8px) scale(1.02);
+  }
+  45% {
+    transform: translateX(-6px) scale(1.01);
+  }
+  60% {
+    transform: translateX(6px) scale(1.01);
+  }
+  75% {
+    transform: translateX(-3px) scale(1);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes cardReveal {
+  0% {
+    transform: scale(0) rotateY(180deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotateY(90deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 15px 30px rgba(241, 196, 15, 0.5);
+  }
+  100% {
+    box-shadow: 0 15px 30px rgba(241, 196, 15, 0.8),
+      0 0 30px rgba(241, 196, 15, 0.6);
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .main-card {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .gacha-box {
+    padding: 20px 30px;
+    font-size: 1.2em;
+  }
+
+  .probability-item {
+    margin: 5px 5px;
+    font-size: 0.8em;
+  }
+
+  .purchase-status {
+    padding: 12px;
+  }
+
+  .purchase-loading {
+    font-size: 1em;
+  }
+
+  .purchase-message {
+    font-size: 0.8em;
+  }
+
+  .view-purchase-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+/* 랜덤박스 기회 표시 */
+.chance-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chance-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chance-count {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffd700;
+}
+
+.chance-loading {
+  font-size: 16px;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+.chance-info {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* 다음 기회까지 남은 금액 표시 */
+.next-chance-info {
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.next-chance-text {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.next-chance-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6b6b;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

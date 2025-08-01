@@ -1,0 +1,260 @@
+/* 전체 공통 Css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 광고, 그래프, 명단 컨테이너 */
+.ad-graph-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* center에서 flex-start로 변경 - 상단 정렬 */
+  width: 100%;
+  /* border: 1px solid red; */
+}
+/* 광고 컨테이너 */
+.ad-container {
+  margin: 0;
+  /* border: 1px solid red; */
+  flex: 6;
+  padding: 0;
+  box-sizing: border-box;
+  height: 450px;
+  /* ▼▼▼ 추천 스타일 적용 ▼▼▼ */
+  /* border: 3px solid #007bff; 파란색의 3px 두께 테두리 (브랜드 색상에 맞춰 변경) */
+  border-radius: 8px;
+  box-shadow: none; /* 그림자 제거 */
+
+  /* border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);  */
+
+  /* border: 1px solid #e2e8f0; 
+    border-radius: 8px;    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  */
+}
+.ad-container img {
+  width: 100%; /* 너비를 부모 컨테이너에 꽉 채웁니다. */
+  height: 100%; /* 높이를 부모 컨테이너에 꽉 채웁니다. (450px) */
+  object-fit: cover; /* 이미지가 찌그러지지 않고, 비율을 유지한 채로 컨테이너를 가득 채웁니다. */
+}
+/* 광고 이미지 안쪽에 버튼을 위한 래퍼 */
+.ad-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 양쪽 화살표 버튼 */
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.arrow-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-button.left {
+  left: 10px;
+}
+
+.arrow-button.right {
+  right: 10px;
+}
+.dots-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+.graph-list-container {
+  display: flex;
+  flex: 4;
+}
+/* 그래프 컨테이너 */
+.graph-container {
+  margin-top: 0px;
+  padding-inline: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 430px;
+  height: 450px; /* 0px에서 450px로 변경 - 광고 컨테이너와 같은 높이 */
+  overflow-y: auto; /* 내용이 넘치면 스크롤 표시 */
+}
+
+.graph-container h2 {
+  margin-top: 20px;
+  /* border: 1px solid red; */
+  font-size: larger;
+}
+/* 그래프, 리스트 검색창 */
+.input-group {
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  border: 1px solid rgb(165, 165, 167);
+  justify-content: center;
+  width: 230px;
+  border-radius: 5px;
+}
+/* 그래프, 리스트 검색창 버튼 */
+.input-group button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  padding: 0;
+  border: none;
+  width: 50px;
+  height: 25px;
+  background-color: #999fa5;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: small;
+}
+.input-group button:hover {
+  background-color: #5d5e61;
+}
+.graph-display img {
+  /* margin-top: ; */
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 350px;
+  object-fit: cover; /* 이미지가 찌그러지지 않고, 비율을 유지한 채로 컨테이너를 가득 채웁니다. */
+}
+/* 명단 컨테이너 */
+.list-container {
+  align-items: center;
+  /* border: solid 1px #000000; */
+  flex: 1.5;
+  /* padding: 10px; */
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.list-container p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 표 스타일 */
+.list-container-table {
+  border: solid 1px #999fa5;
+}
+
+.list-container-table-head {
+  /* 표의 헤더(머리글) 영역 스타일 */
+  display: flex; /* 자식 요소(컬럼명)들을 가로로 배치 */
+  background-color: #f8f9fa; /* 헤더 배경색 */
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ddd; /* 본문과 구분되는 두꺼운 밑줄 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.div-table-row {
+  display: flex; /* 이 속성이 핵심입니다. */
+  border-bottom: 1px solid #ddd;
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.div-table-cell {
+  padding: 8px 5px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px; /* 최소 높이 설정 */
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+}
+
+/* 고유 클래스로 너비 비율 지정 */
+.rank-cell {
+  /* border: solid 1px red; */
+  flex: 5; /* 순위 컬럼은 5의 비율 */
+  width: 50%; /* 고정 너비 설정 */
+}
+.name-cell {
+  flex: 5; /* 이름 컬럼은 5의 비율 */
+  width: 50%; /* 고정 너비 설정 */
+  padding-left: 6px; /* 왼쪽 패딩 1px 증가 (5px + 1px) */
+  padding-right: 6px; /* 오른쪽 패딩 1px 증가 (5px + 1px) */
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@반응형@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* 화면 너비가 768px 이하일 때 적용될 스타일 */
+@media (max-width: 768px) {
+  /* 1. 메인 컨테이너들을 세로로 쌓습니다. (기존 코드) */
+  .ad-graph-list-container {
+    flex-direction: column; /* 가로(row) -> 세로(column) */
+    align-items: stretch; /* 아이템들이 화면 너비를 꽉 채우도록 변경 */
+  }
+
+  .ad-container {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .graph-list-container {
+    display: flex;
+    /* gap: 20px; 그래프와 표 사이의 간격 */
+    align-items: flex-start; /* 위쪽을 기준으로 정렬 */
+    width: 100%;
+    /* border: solid 1px red; 영역 확인을 위한 임시 테두리 */
+  }
+  .list-container {
+    padding-block: 10px;
+  }
+
+  /* 그래프와 표를 감싸는 results-container도 세로로 쌓이게 변경 */
+  .results-container {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center; /* 가운데 정렬 */
+    gap: 10px;
+    width: 100%;
+  }
+}

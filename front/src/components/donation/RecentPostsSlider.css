@@ -1,0 +1,132 @@
+/* 기본 캐러셀 컨테이너 */
+.horizontal-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 캐러셀 버튼 (공통) */
+.carousel-button {
+  position: absolute;
+  z-index: 10;
+  padding: 0.5rem; /* p-2 */
+  background-color: #4a5568; /* bg-gray-700 */
+  color: #ffffff; /* text-white */
+  border-radius: 9999px; /* rounded-full */
+}
+
+/* 이전 버튼 */
+.carousel-button-prev {
+  left: 0;
+  margin-left: 0.5rem; /* ml-2 */
+}
+
+/* 다음 버튼 */
+.carousel-button-next {
+  right: 0;
+  margin-right: 0.5rem; /* mr-2 */
+}
+
+/* 슬라이드 아이템이 보이는 영역 */
+.carousel-viewport {
+  overflow: hidden;
+  flex-grow: 1;
+  padding: 0 12.5%; /* 앞뒤로 반씩 잘리도록 패딩 추가 */
+}
+
+/* 슬라이드 아이템들을 감싸는 트랙 */
+.carousel-track {
+  display: flex;
+}
+
+/* 개별 슬라이드 카드 */
+.carousel-card {
+  flex-shrink: 0;
+  padding: 0.5rem; /* p-2 */
+  /* width는 JSX에서 동적으로 계산됩니다. */
+}
+
+.card-link-wrapper {
+  background-color: #ffffff; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+}
+
+.card-link-wrapper:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04); /* hover:shadow-xl */
+}
+
+/* 카드 이미지 영역 */
+.card-image-wrapper {
+  position: relative;
+  height: 15rem; /* h-60 - 10rem에서 15rem으로 증가 */
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: white;
+}
+
+/* 이미지가 없을 때 */
+.card-no-image {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e8f0; /* bg-gray-200 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0aec0; /* text-gray-500 */
+}
+
+/* 카드 컨텐츠 영역 - 패딩 제거 */
+.card-content {
+  padding: 0; /* 패딩 제거 */
+}
+
+.card-title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  color: #2d3748; /* text-gray-800 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* truncate */
+}
+
+.card-writer {
+  font-size: 0.875rem; /* text-sm */
+  color: #718096; /* text-gray-600 */
+  margin-top: 0.25rem; /* mt-1 */
+}
+
+/* 최신글 슬라이더 전체 컨테이너 */
+.recent-posts-slider-container {
+  margin-top: 0.2%; /* 1%에서 0.2%로 더 줄임 */
+  padding: 1rem; /* p-4 */
+  background-color: transparent; /* 배경색 제거 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: none; /* 그림자 제거 */
+}
+
+/* 최신글 슬라이더 헤더 */
+.recent-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* 최신글 슬라이더 제목 */
+.recent-posts-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  text-align: center; /* 중앙 정렬 */
+  margin: 0; /* margin 제거 */
+}

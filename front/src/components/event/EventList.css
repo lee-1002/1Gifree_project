@@ -1,0 +1,143 @@
+.boardEventList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.boardEventList li {
+  width: calc(50% - 10px); /* 2열 = 전체의 절반 - gap 고려 */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e7e7e7;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.boardEventList li:first-child {
+  border-top: none;
+}
+.thumb {
+  position: relative;
+  display: inline-block; /* 크기 맞추기 */
+}
+
+.thumb.inactive::after {
+  content: "비활성화된 이벤트";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* 반투명 오버레이 */
+  color: red;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+  text-shadow: 0 0 5px white;
+}
+
+.thumb img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 740 / 357;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.data {
+  margin-top: 16px;
+  flex: 1;
+}
+
+.subject {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.txt.ellipsis {
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+  line-height: 1.4;
+  max-height: 4.2em; /* 3줄 정도 표시 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.btn_detail {
+  margin-left: auto;
+  align-self: center;
+  background: #007bff;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.title-link {
+  font-size: 1.1rem;
+  font-weight: 700; /* 더 굵게, 이전보다 확실히 진하게 */
+  color: #333;
+  text-decoration: none;
+  font-family: "Malgun Gothic", Dotum, Helvetica, droid sans fallback,
+    AppleSDGothicNeo, sans-serif; /* 이전 폰트 유지 */
+}
+
+.title-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 페이징네이션 스타일 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 30px 0;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4);
+}
+
+.pagination button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
