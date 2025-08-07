@@ -32,6 +32,7 @@
 - 지도 API 위치 기반 서비스
 - 결제 API(Payment Gate)로 실제 구매 확인
 - 구매 완료된 구매 내역 마이페이지에 담기도록
+- 회의록 및 수행일지 담당
 
 이용석
 - 챗봇: 채팅(Chat-GPT)/그래프(Chat-GPT)/음성 및 이미지 분석(Google Cloud Vision AI) 구현, 지도 API, 결제 API, 마이페이지, 장바구니, 상품 연동
